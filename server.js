@@ -1,7 +1,9 @@
+require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path')
+const port = process.env.PORT || 3000
 const mysql = require('mysql');
 
 
@@ -11,12 +13,13 @@ app.use('/static',express.static(path.join(__dirname,'public')))
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'/views'))
 
-const routes = require('./routers');
+const routes = require('./routers/routers');
 app.use('/', routes);
 
+//catch missing endpoints
 app.get('*',(req,res)=>{
-  res.render('404')
+  res.status(404).render('404')
 })
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-});
+
+app.listen(port, console.log(`Server listening on PORT : ${port}`));
+
