@@ -85,7 +85,7 @@ module.exports = connection;
 ![users-update](https://github.com/Newton-Nganga/express-ejs-mysql/assets/93589514/cb1d2290-9f65-4b9a-9e39-9de729687bba)
 
 ## contributions
-This project is enterly for use in starting a development server,Its open to contribution.  
+This project is entirely for use in starting a development server,Its open to contribution.  
 Clone the repo and Boom! 🤯: 💥: 💥: You can now mess up things .
 
 
