@@ -19,15 +19,18 @@ Requirements
     - You may also need to replace localhost with the ip adress: 127.0.0.1
       
   ```js
-  const mysql = require('mysql2')
+const mysql = require('mysql')
 //your credentials
+//You could save the creadentials in a dotenv file
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'felix',
+  host: 'mysql-117598-0.cloudclusters.net', //use localhost or 127.0.0.1
+  user: 'admin',
+  password: '1FnGiQYa',
   database: 'test',
-  port:'3306'
+  port:'10037' //The db port
 });
+
+
 //try to make a connection
 connection.connect((err) => {
   console.log('==== TRYING TO CONNECT TO THE DB ====')
@@ -40,7 +43,7 @@ connection.connect((err) => {
 });
 
 
-// export default db;
+
 module.exports = connection;
 
   ```
